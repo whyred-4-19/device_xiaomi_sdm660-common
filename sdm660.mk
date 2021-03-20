@@ -443,3 +443,15 @@ $(call inherit-product, vendor/xiaomi/sdm660-common/sdm660-common-vendor.mk)
 # Recorder
 PRODUCT_PACKAGES += \
     OPScreenRecorder
+
+# XiaomiParts
+$(call inherit-product-if-exists, vendor/XiaomiParts/xiaomiparts.mk)
+
+PRODUCT_PACKAGES += \
+  init.xiaomiparts.rc \
+  init.xiaomi_parts.rc \
+  init.parallax.rc \
+  init.parallax.sh \
+  init.blur.rc \
+  init.blur.sh
+
